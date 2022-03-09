@@ -1,7 +1,11 @@
+import "@nuxt/types"
 import { PetsApi } from "~/api/pets"
 
 declare module 'vue/types/vue' {
 	interface Vue {
+		$petsApi: PetsApi
+	}	
+	interface Context {
 		$petsApi: PetsApi
 	}
 }

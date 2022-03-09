@@ -23,13 +23,15 @@
         "./*"
       ]
     },
-    "typeRoots": ["~/types"],
+    "typeRoots": ["~/types/*"],
     "types": [
       "@nuxt/types",
       "@types/node",
       "@nuxtjs/axios"
     ]
   },
+  "include": ["types/*.d.ts"],
+  
   "exclude": [
     "node_modules",
     ".nuxt",

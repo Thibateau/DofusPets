@@ -1,5 +1,3 @@
-
-
 export type Pet= {
 	quote: string
 	character: string
