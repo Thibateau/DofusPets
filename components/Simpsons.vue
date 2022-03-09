@@ -1,7 +1,9 @@
 <template>
   <div class="">
-    <div class="border rounded-full bg-yellow-400 py-14 flex justify-center font-bold text-7xl">
-      <h1>Random Simpsons</h1>
+    <div
+      class="shadow-lg shadow-black border border-4 border-black rounded-full bg-yellow-400 py-14 flex justify-center font-bold text-7xl"
+    >
+      <h1 class="">Random Simpsons</h1>
       <img
         width="250px"
         class="pl-12"

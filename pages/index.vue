@@ -1,6 +1,6 @@
 <template>
 <div class="bg-blue-400">
-  <div class="h-screen w-screen py-24 px-72 border rounded-full bg-white">
+  <div class="h-screen w-screen py-24 px-72 border rounded-full bg-white shadow-lg shadow-black border border-4 border-black">
     <div class="">
       <Simpsons class="":simp="simpsonCharacter" />
       <div class="flex flex-col">
