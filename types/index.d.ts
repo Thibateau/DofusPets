@@ -1,4 +1,4 @@
-export type Pet= {
+export type SimpsonsCharacter= {
 	quote: string
 	character: string
 	image : string

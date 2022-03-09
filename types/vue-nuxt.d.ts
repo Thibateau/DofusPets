@@ -1,27 +1,27 @@
 import "@nuxt/types"
-import { PetsApi } from "~/api/pets"
+import { SimpsonsApi } from "~/api/simpsons"
 
 declare module 'vue/types/vue' {
 	interface Vue {
-		$petsApi: PetsApi
+		$simpsonsApi: SimpsonsApi
 	}	
 	interface Context {
-		$petsApi: PetsApi
+		$simpsonsApi: SimpsonsApi
 	}
 }
 
 declare module '@nuxt/types' {
 	interface NuxtAppOptions {
-		$petsApi: PetsApi
+		$simpsonsApi: SimpsonsApi
 	}
 
 	interface Context {
-		$petsApi: PetsApi
+		$simpsonsApi: SimpsonsApi
 	}
 }
 
 declare module 'vuex/types/index' {
 	interface Store<S> {
-		$petsApi: PetsApi
+		$simpsonsApi: SimpsonsApi
 	}
 }

@@ -2,7 +2,7 @@
 <div class="bg-blue-400">
   <div class="h-screen w-screen py-24 px-72 border rounded-full bg-white">
     <div class="">
-      <Pet class="":pet="pet" />
+      <Simpsons class="":simp="simpsonCharacter" />
       <div class="flex flex-col">
         <button @click="randomSimpsons" class="justify-center">
          <img
@@ -19,25 +19,25 @@
 </template>
 
 <script lang="ts">
-import { Pet } from "~/types";
+import { SimpsonsCharacter } from "~/types";
 export default {
   data() {
     return {
-      pet: null as Pet | null,
+      simpsonCharacter: null as SimpsonsCharacter | null,
       loading: false
     };
   },
-  async asyncData({ $petsApi }) {
-    const { data } = await $petsApi.getList();
+  async asyncData({ $simpsonsApi }) {
+    const { data } = await $simpsonsApi.getList();
     return {
-      pet: data[0],
+      simpsonCharacter: data[0],
     };
   },
   methods: {
     async randomSimpsons() {
       this.loading = true
-      const { data } = await this.$petsApi.getList();
-      this.pet = data[0];
+      const { data } = await this.$simpsonsApi.getList();
+      this.simpsonCharacter = data[0];
       this.loading = false
 
     },

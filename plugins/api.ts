@@ -1,9 +1,9 @@
 import { Context } from "@nuxt/types"
-import { PetsApi } from "~/api/pets"
+import { SimpsonsApi } from "~/api/simpsons"
 import { Plugin } from '@nuxt/types'
 
 const apiPlugin: Plugin = (ctx: Context, inject: any) => {
-	inject("petsApi", new PetsApi(ctx.$axios))
+	inject("simpsonsApi", new SimpsonsApi(ctx.$axios))
 }
 
 export default apiPlugin

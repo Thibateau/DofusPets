@@ -11,13 +11,13 @@
     <div class="flex">
       <div class="flex-1 flex-col flex">
         <div class="mx-auto">
-          <img class="max-h-96 w-auto flex pt-8" :src="pet.image" />
+          <img class="max-h-96 w-auto flex pt-8" :src="simp.image" />
         </div>
       </div>
       <div class="flex-1">
         <div class="flex flex-col items-center mx-auto">
-          <h2 class="text-4xl font-bold pt-12">{{ pet.character }}</h2>
-          <p class="text-2xl font-bold pt-12">{{ pet.quote }}</p>
+          <h2 class="text-4xl font-bold pt-12">{{ simp.character }}</h2>
+          <p class="text-2xl font-bold pt-12">{{ simp.quote }}</p>
         </div>
       </div>
     </div>
@@ -26,10 +26,10 @@
 
 <script lang="ts">
 import { PropType } from "vue";
-import { Pet } from "~/types";
+import { SimpsonsCharacter } from "~/types";
 export default {
   props: {
-    pet: { type: Object as PropType<Pet>, required: true },
+    simp: { type: Object as PropType<SimpsonsCharacter>, required: true },
   },
 };
 </script>
