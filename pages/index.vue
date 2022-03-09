@@ -7,6 +7,7 @@
         <button @click="randomSimpsons" class="justify-center">
          <img
           class="mx-auto"
+          :class="[{'animate-bounce':loading}]"
           src="~assets/images/pink-donuts.png"
           width="350px"
         />
@@ -23,6 +24,7 @@ export default {
   data() {
     return {
       pet: null as Pet | null,
+      loading: false
     };
   },
   async asyncData({ $petsApi }) {
@@ -33,8 +35,11 @@ export default {
   },
   methods: {
     async randomSimpsons() {
+      this.loading = true
       const { data } = await this.$petsApi.getList();
       this.pet = data[0];
+      this.loading = false
+
     },
   },
 };
