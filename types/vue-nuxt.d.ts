@@ -10,7 +10,7 @@ declare module 'vue/types/vue' {
 	}
 }
 
-declare module '@nuxt/types' {
+ declare module '@nuxt/types' {
 	interface NuxtAppOptions {
 		$simpsonsApi: SimpsonsApi
 	}

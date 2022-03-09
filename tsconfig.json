@@ -26,8 +26,8 @@
     "typeRoots": ["~/types/*"],
     "types": [
       "@nuxt/types",
-      "@types/node",
-      "@nuxtjs/axios"
+      "@nuxtjs/axios",
+      "@types/node"
     ]
   },
   "include": ["types/*.d.ts"],

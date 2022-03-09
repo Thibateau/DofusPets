@@ -10,6 +10,11 @@ export class SimpsonsApi {
 		this.$axios = $axios
 	}
 	getList() {
-		return this.$axios.get<SimpsonsCharacter[]>(URL_SIMPSONS)
+		try{
+			return this.$axios.get<SimpsonsCharacter[]>(URL_SIMPSONS)
+		}
+		catch{
+			return null
+		}
 	}
 }
