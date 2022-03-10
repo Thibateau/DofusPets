@@ -13,7 +13,7 @@
       <div class="flex-1 flex-col flex">
         <div class="mx-auto">
           <img
-            class="pl-4 pt-4 w-auto mx-auto xl:h-96 flex"
+            class=" pl-4 pt-4 w-auto mx-auto xl:h-96 flex"
             width=""
             :src="simp.image"
           />
@@ -42,5 +42,6 @@ export default {
   props: {
     simp: { type: Object as PropType<SimpsonsCharacter>, required: true },
   },
+
 };
 </script>

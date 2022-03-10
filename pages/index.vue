@@ -4,7 +4,7 @@
       <Simpsons v-if="simpsonCharacter" class="":simp="simpsonCharacter" />
       <div v-if="simpsonCharacter===undefined">
         <img src="~assets/images/homer-simpson-fin.jpg">
-        <h2 class="text-l font-bold xl:text-5xl"> Hoo punaize ca bug... </h2>
+        <h2 class="text-l font-bold xl:text-5xl"> Houu pinaize ca bug... </h2>
       </div>  
       <div class="flex flex-col">
         <button @click="randomSimpsons" class="mx-auto flex justify-center">
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       simpsonCharacter: null as SimpsonsCharacter | null | undefined,
-      loading: false
+      loading: false,
     };
   },
   async asyncData({ $simpsonsApi }) {
@@ -42,7 +42,6 @@ export default {
       const result = await this.$simpsonsApi.getList();
       this.simpsonCharacter = result?.data?.[0];
       this.loading = false
-
     },
   },
 };
